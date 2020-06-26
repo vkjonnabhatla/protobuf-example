@@ -30,6 +30,14 @@ public class ProtobufExampleApplication {
         return new RestTemplate(Arrays.asList(hmc));
     }
 
+    /**
+     * This converter supports by default "application/x-protobuf" and "text/plain" with the official "com.google.protobuf:protobuf-java" library. Other formats can be supported with one of the following additional libraries on the classpath:
+     *
+     * "application/json", "application/xml", and "text/html" (write-only) with the "com.googlecode.protobuf-java-format:protobuf-java-format" third-party library
+     * "application/json" with the official "com.google.protobuf:protobuf-java-util" for Protobuf 3 (see ProtobufJsonFormatHttpMessageConverter for a configurable variant)
+     * Requires Protobuf 2.6 or higher (and Protobuf Java Format 1.4 or higher for formatting). This converter will auto-adapt to Protobuf 3 and its default protobuf-java-util JSON format if the Protobuf 2 based protobuf-java-format isn't present; however, for more explicit JSON setup on Protobuf 3, consider ProtobufJsonFormatHttpMessageConverter.
+     * @return
+     */
     @Bean
     ProtobufHttpMessageConverter protobufHttpMessageConverter() {
         return new ProtobufHttpMessageConverter();

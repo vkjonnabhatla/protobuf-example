@@ -32,28 +32,30 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!-- ProtobufHTTPMessageConverter needs 1.4 version of protobuf-java-format or higher it supports json and xml -->
+		<!--<dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
             <version>${protobuf-java.version}</version>
-        </dependency>
-       <dependency>
+        </dependency>-->
+       <!--<dependency>
             <groupId>com.googlecode.protobuf-java-format</groupId>
             <artifactId>protobuf-java-format</artifactId>
             <version>${protobuf-java-format.version}</version>
-        </dependency>
+        </dependency>-->
 		<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java-util -->
-		<!--<dependency>
+		<!-- Inorder to use ProtobufJsonFormatHttpMessageConverter following two dependencies required as it use protobuf 3-->
+		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java-util</artifactId>
 			<version>3.12.2</version>
-		</dependency>-->
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
-		<!--<dependency>
+		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java</artifactId>
 			<version>3.12.2</version>
-		</dependency>-->
+		</dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
