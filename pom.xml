@@ -33,30 +33,29 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- ProtobufHTTPMessageConverter needs 1.4 version of protobuf-java-format or higher it supports json and xml -->
-		<!--<dependency>
+		<dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
             <version>${protobuf-java.version}</version>
-        </dependency>-->
-       <!--<dependency>
+        </dependency>
+       <dependency>
             <groupId>com.googlecode.protobuf-java-format</groupId>
             <artifactId>protobuf-java-format</artifactId>
             <version>${protobuf-java-format.version}</version>
-        </dependency>-->
+        </dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java-util -->
 		<!-- Inorder to use ProtobufJsonFormatHttpMessageConverter following two dependencies required as it use protobuf 3-->
-		<dependency>
+		<!--<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java-util</artifactId>
 			<version>3.12.2</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java</artifactId>
 			<version>3.12.2</version>
 		</dependency>
-
+-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

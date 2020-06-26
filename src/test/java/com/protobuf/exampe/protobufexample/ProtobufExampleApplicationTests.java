@@ -1,13 +1,7 @@
 package com.protobuf.exampe.protobufexample;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
+import com.googlecode.protobuf.format.JsonFormat;
+import com.student.protobuf.StudentTraining.Course;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -22,14 +16,19 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
-import com.google.protobuf.util.JsonFormat;
-import com.student.protobuf.StudentTraining.Course;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
 
 @DirtiesContext
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = ProtobufExampleApplication.class, webEnvironment = WebEnvironment.DEFINED_PORT)
 public class ProtobufExampleApplicationTests {
-/*
+
 	@Test
 	public void contextLoads() {
 	}
@@ -89,5 +88,5 @@ public class ProtobufExampleApplicationTests {
         assertThat(response, containsString("number"));
         assertThat(response, containsString("type"));
     }
-*/
+
 }
